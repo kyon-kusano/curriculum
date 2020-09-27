@@ -1,0 +1,37 @@
+#wrapper { /* 共通の処理 */
+    width:800px;
+}
+
+.header { 
+    border: solid 1px #999;
+    background-color: yellow;
+}
+
+.main {
+    height:500px;
+    border: solid 1px #999; 
+    background-color: skyblue;
+}
+
+.footer {
+    border: solid 1px #999;
+    background-color: pink;
+}
+@media screen and (max-width: 767px) {
+
+    #wrapper {
+        width: 80%;
+    }
+
+}
+@media screen and (max-width: 479px) {
+
+    .header {
+        height: 300px;
+    }
+
+    .footer {
+        height: 200px;
+    }
+
+}
