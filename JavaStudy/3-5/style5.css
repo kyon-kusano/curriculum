@@ -1,0 +1,41 @@
+.clearfix::after{
+	content: '';
+	display: block;
+	float: left;
+}
+.clearfix{
+	height:150px;
+}
+.header{
+	background-color: #FFFF00;
+	height: 150px; width: 600px;
+}
+.main-top-left{
+	background-color: #33FFFF;
+	height: 150px; width: 200px;
+	float: left;
+}
+.main-top-center{
+	background-color: #FF0000;
+	height: 150px; width: 200px;
+	float: left;
+}
+.main-top-right{
+	background-color: #0000FF;
+	height: 150px; width: 200px;
+	float: left;
+}
+.main-bottom-left{
+	background-color: #00FF00;
+	height: 150px; width: 450px;
+	float: left;
+}
+.main-bottom-right{
+	background-color: #FF00FF;
+	height: 150px; width: 150px;
+	float: left;
+}
+.footer{
+	background-color: #33FFFF;
+	height: 150px; width: 600px;
+}
