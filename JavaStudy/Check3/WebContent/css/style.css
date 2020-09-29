@@ -1,0 +1,40 @@
+@charset "UTF-8";
+.main{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.header{
+	background-color: gray;
+}
+.label{
+	display: flex;
+}
+.login{
+	display: inline-block;
+	padding: 10px;
+	color: white;
+	font-family:"Anenir Next";
+}
+.label-header{
+	padding: 10px;
+	font-size: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family:"Anenir Next";
+}
+textarea{
+	border: 1.5px gray solid;
+}
+.footer{
+	background-color: gray;
+}
+
+.label-footer{
+	display: inline-block;
+	padding: 10px;
+	color: white;
+	letter-spacing: 1px;
+	font-family:"Anenir Next"";
+}
+
