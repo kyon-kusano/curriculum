@@ -2,12 +2,14 @@ package controller;
 /**
  * 社員情報管理コントローラー
  */
-
+// 	例外処理　ファイルやネットワーク等の入出力中のエラー
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
+//webスコープ　マスターデータのキャッシュやアクセスカウント数の保管。
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+//webスコープ　ログインIDやパスワード情報の保管。
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,7 +24,7 @@ import service.EmployeeService;
 public class EmployeeController extends HttpServlet {
  public void doPost(HttpServletRequest request, HttpServletResponse response)
  throws ServletException, IOException {
-
+//throws 上位の処理へ例外を投げる。
  try {
   // 問① index.htmlから送信されたIDとPassWordの値を取得できるように修正しましょう。
 //	 HttpServletRequestインターフェースの、 requestオブジェクト を使用してパラメータを読み込みそれぞれの変数へ代入
