@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 //問４－１ コントローラーを意味するアノテーションを記
+//クラスがコントローラの役目を負うことを示すために使用される
 @Controller
 public class AuthController {
 
