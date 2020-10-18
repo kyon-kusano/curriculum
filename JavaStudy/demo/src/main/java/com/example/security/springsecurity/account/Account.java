@@ -25,8 +25,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 //実行時に宣言した各フィールド変数がカラムとして作成される
 //問１－１ DB設計に必要なアノテーションを記述
+//＠EntityアノテーションはJPA（Java Persistence API）のエンティティであることを示す
+////※エンティティクラスに指定
+//＠Tableのnameで指定したものがテーブル名
 @Entity
 @Table(name="accounts")
+//UserDetailsは Spring-Securityが提供するJavaのインターフェースです。 ユーザー名とパスワードを保存し、
+//アカウントの情報を出力するメソッドを提供
 public class Account implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
@@ -36,6 +41,7 @@ public class Account implements UserDetails {
 
 	//問１－２ プライマリーキーを設定するアノテーションを記述
     @Id
+    //nullable=falseはNOTNULLと同じ、unique=trueは一意性を制約するもので同じ値を登録できなくするもの
 	@Column(nullable = false, unique = true)
 	private String username;
 
@@ -55,6 +61,7 @@ public class Account implements UserDetails {
 	private Date createdAt;
 
 	// roleは複数管理できるように、Set<>で定義。
+//	@ElementCollectionはCollectionをEntityの属性として使用するアノテーションです
 	@ElementCollection(fetch = FetchType.EAGER)
 	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)

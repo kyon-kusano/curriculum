@@ -1,0 +1,63 @@
+情報: Serverのバージョン名:     Apache Tomcat/8.5.58 [日 10 18 18:53:30 JST 2020]
+情報: Server ビルド:            Sep 10 2020 21:45:33 UTC [日 10 18 18:53:30 JST 2020]
+情報: サーバーのバージョン番号: 8.5.58.0 [日 10 18 18:53:30 JST 2020]
+情報: OS 名:                    Mac OS X [日 10 18 18:53:30 JST 2020]
+情報: OS バージョン:            10.15.6 [日 10 18 18:53:30 JST 2020]
+情報: アーキテクチャ:           x86_64 [日 10 18 18:53:30 JST 2020]
+情報: Java Home:                /Applications/Eclipse_2020-09.app/Contents/java/8/Home/jre [日 10 18 18:53:30 JST 2020]
+情報: JVM バージョン:           1.8.0_202-b08 [日 10 18 18:53:30 JST 2020]
+情報: JVM ベンダ:               Oracle Corporation [日 10 18 18:53:30 JST 2020]
+情報: CATALINA_BASE:            /Users/kyousuke_kusano/LetsEngineer/curriculum/JavaStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0 [日 10 18 18:53:30 JST 2020]
+情報: CATALINA_HOME:            /Applications/Eclipse_2020-09.app/Contents/tomcat/8 [日 10 18 18:53:30 JST 2020]
+情報: コマンドライン引数:       -Djava.ext.dirs=/Applications/Eclipse_2020-09.app/Contents/java/8/Home/jre/lib/ext [日 10 18 18:53:30 JST 2020]
+情報: コマンドライン引数:       -Dcatalina.base=/Users/kyousuke_kusano/LetsEngineer/curriculum/JavaStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0 [日 10 18 18:53:30 JST 2020]
+情報: コマンドライン引数:       -Dcatalina.home=/Applications/Eclipse_2020-09.app/Contents/tomcat/8 [日 10 18 18:53:30 JST 2020]
+情報: コマンドライン引数:       -Dwtp.deploy=/Users/kyousuke_kusano/LetsEngineer/curriculum/JavaStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps [日 10 18 18:53:30 JST 2020]
+情報: コマンドライン引数:       -Djava.endorsed.dirs=/Applications/Eclipse_2020-09.app/Contents/tomcat/8/endorsed [日 10 18 18:53:30 JST 2020]
+情報: コマンドライン引数:       -Dfile.encoding=UTF-8 [日 10 18 18:53:30 JST 2020]
+情報: 商用環境に最適な性能を発揮する APR ベースの Tomcat ネイティブライブラリが java.library.path [/Users/kyousuke_kusano/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.] に存在しません。 [日 10 18 18:53:30 JST 2020]
+情報: プロトコルハンドラ ["http-nio-8080"] を初期化します。 [日 10 18 18:53:30 JST 2020]
+情報: Using a shared selector for servlet write/read [日 10 18 18:53:30 JST 2020]
+情報: Initialization processed in 495 ms [日 10 18 18:53:30 JST 2020]
+情報: サービス [Catalina] を起動します [日 10 18 18:53:30 JST 2020]
+情報: Starting Servlet Engine: Apache Tomcat/8.5.58 [日 10 18 18:53:30 JST 2020]
+情報: 少なくとも1つのJARが、まだTLDを含んでいないTLDについてスキャンされました。 スキャンしたが、そこにTLDが見つからなかったJARの完全なリストについては、このロガーのデバッグログを有効にしてください。 スキャン中に不要なJARをスキップすると、起動時間とJSPのコンパイル時間が改善されます。 [日 10 18 18:53:31 JST 2020]
+情報: プロトコルハンドラー ["http-nio-8080"] を開始しました。 [日 10 18 18:53:31 JST 2020]
+情報: Server startup in 385 ms [日 10 18 18:53:31 JST 2020]
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "img_url"
+  位置: 19
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2553)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2285)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:473)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:393)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+	at service.ItemsService.search(ItemsService.java:45)
+	at controller.ItemController.doPost(ItemController.java:23)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:690)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:616)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:818)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1626)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
