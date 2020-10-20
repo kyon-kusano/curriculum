@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #box {
-            width: 100px;
-            height: 100px;
-            background-color: blue;
-        }
-    </style>
 </head>
 <body>
-    <div id="box"></div>
+    <input type="button" value="ボタン" onClick="changeBtn()">
+    <p id="p1">ボタンが押されると表示非表示が切り替わります。</p>
+
     <script>
-        //問題①：idで要素を取得して、背景色を赤色に変更する処理を記述してください。
-        let elem = document.getElementById("box");
-        elem.style.backgroundColor = "red";
+        function changeBtn() {
+            // ①id「p1」の要素を取得
+            let elem = document.getElementById('p1');
+            // ②取得したp1に「display:none」が無かったら、「display:none」を付与する。
+            // 取得したp1に「display:none」があったら、「display:block」を付与する。
+            let value = elem.style.display
+            if(value === "none"){
+                elem.style.display = "block";
+            }else{
+                elem.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
