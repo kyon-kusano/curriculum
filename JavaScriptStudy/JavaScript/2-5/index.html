@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        th, td {
+            padding : 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <select id = "0" onchange="changeLang()">
+        <option id="select">選択してください</option>
+        <option id="selected_jpn">日本語</option>
+        <option id="selected_en">English</option>
+        <option id="selected_all">全て表示</option>
+    </select>
+    <table>
+        <tr class = "1">
+            <th class = "1">日本</th>
+            <td class = "1">こんにちは</td>
+            <td class = "1">ありがとう</td>
+            <td class = "1">さようなら</td>
+        </tr>
+        <tr class = "2">
+            <th class = "2">English</th>
+            <td class = "2">Hello</td>
+            <td class = "2">Thank you</td>
+            <td class = "2">Good Bye</td>
+        </tr>
+    </table>
+
+    <script>
+        //①onchangeで使用されている関数の中身を実装してください。
+        function changeLang(){
+            let value = document.getElementById('0').value;
+            console.log(value);
+            if( value === "日本語"){
+                let ja_tr = document.querySelectorAll('tr[class="1"]');
+                for(let j = 0; j < ja_tr.length; j++){
+                    ja_tr[j].style.display = "table-row";
+                }
+                let ja_thd = document.querySelectorAll('th[class="1"],td[class="1"]');
+                for(let j = 0; j < ja_thd.length; j++){
+                    ja_thd[j].style.display = "table-cell";
+                }
+                let en = document.querySelectorAll('tr[class="2"],th[class="2"],td[class="2"]');
+                for(let e = 0; e < en.length; e++){
+                    en[e].style.display = "none";
+                }
+                
+            }else if(value === "English"){
+                let ja = document.querySelectorAll('tr[class="1"],th[class="1"],td[class="1"]');
+                for(let j = 0; j < ja.length; j++){
+                    ja[j].style.display = "none";
+                }
+                let en_tr = document.querySelectorAll('tr[class="2"]');
+                for(let e = 0; e < en_tr.length; e++){
+                    en_tr[e].style.display = "table-row";
+                }
+                let en_thd = document.querySelectorAll('th[class="2"],td[class="2"]');
+                for(let e = 0; e < en_thd.length; e++){
+                    en_thd[e].style.display = "table-cell";
+                }
+            }else{
+                let tr = document.querySelectorAll('tr');
+                for(let t = 0; t < tr.length; t++){
+                    tr[t].style.display = "table-row";
+                }
+                let thd = document.querySelectorAll('th,td');
+                for(let t = 0; t < thd.length; t++){
+                    thd[t].style.display = "table-cell";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
