@@ -152,7 +152,6 @@ public abstract class BaseServlet extends HttpServlet {
             // ←ここへ記述
         	EmployeeBean pEmployeeBeanId = new EmployeeBean(reqEmpId);
         	ExecuteCase eCase = ExecuteCase.valueOf("FIND_BY_EMPID");
-        	Logger.log(new Throwable(), "isLoginError = " + pEmployeeBeanId);
         	responseBean = ems.getEmployeeData(eCase, pEmployeeBeanId);
 
             // 最初の1件を取得

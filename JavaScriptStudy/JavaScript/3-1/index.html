@@ -15,8 +15,15 @@
     <button class="click">クリック</button>
     <script>
         $(".click").click(function(){
+          action = document.querySelector('.action');
+          if( action == null){
             $(".left").addClass("action");
             $(".right").addClass("action");
+          }else{
+            $(".left").removeClass("action");
+            $(".right").removeClass("action");
+          }
+
         })
     </script>
   </body>
