@@ -1,0 +1,19 @@
+* {
+  background-color: gray;
+  color: white;
+}
+h2 {
+  color: white;
+}
+p {
+  color: white;
+  text-align: center; 
+}
+form {
+  text-align: center;
+}
+input[type="submit"]{
+  background-color: white;
+  color: black;
+}
+

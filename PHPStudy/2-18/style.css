@@ -1,0 +1,32 @@
+* {
+  background-color: gray;
+}
+h1 {
+  color: white;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-bottom: 3px solid white;
+  font-family: serif;
+  padding: 0;
+  margin: 0;
+}
+h2 {
+  color: white;
+}
+p {
+  color: white;
+  text-align: center; 
+}
+form {
+  margin-top: 100px;
+  text-align: center;
+}
+input[type=text]{
+  background-color: white;
+  border: none;
+}
+input[type=submit]{
+  background-color: lightgray;
+}
