@@ -1,11 +1,11 @@
 <?php
 $sum = 0;
-$num = 1;
+$num = 0;
 while($sum < 40){
   $rand = mt_rand(1, 6);
+  $num++;
   echo $num."回目＝".$rand.'<br>';
   $sum += $rand;
-  $num++;
 }
 echo "合計".$num."回でゴールしました。";
 echo '<br><br>';
@@ -25,7 +25,3 @@ if(4 <= $time && $time <= 11){
   echo "こんばんは";
 }
 ?>
-
-<!-- 
-
- -->
