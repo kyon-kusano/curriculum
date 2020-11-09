@@ -83,3 +83,13 @@ sprintf（変数に代入できるprintf）<br>
     $join = sprintf("回答：%sは%02d月%02d日にmeetupを行いました。", $name, $month, $date);
     echo $join;
 ?>
+
+<!-- 
+1. PostgreSQL：オープンソースなリレーショナルデータベース管理システム。全てのソースが公開されているため、用途を問わず無料で使用できる
+   OracleSQL：オラクル社が開発したリレーショナルデータベース管理システムで使用されるSQL言語
+2. TortoiseGit：GitのクライアントツールでWindowsのシェルエクステンションとして機能する
+   TortoiseSVN：集中型バージョン管理システム「Subversion(SVN)」のWindows用GUIソフト
+3. 外部設計：インターフェースをはじめ、ユーザーから見えるところを主に設計する
+   内部設計：システム内部の詳細な設計
+ -->
+
