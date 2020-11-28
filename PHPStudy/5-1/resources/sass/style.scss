@@ -1,0 +1,54 @@
+main{
+
+}
+.header {
+  background-color: white;
+  width: 40%;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 5px;
+  &__home {
+    background-color: white;
+    padding:5px 0 5px 10px;
+    border-bottom: 1px solid gray;
+  }
+  &__form{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    &__text {
+      margin-bottom: 20px;
+    }
+    &__submit{
+      margin: 0 0 0 auto;
+      width: 90px;
+    }
+  }
+}
+.index {
+  margin-top: 10px;
+  &__box{
+    background-color: white;
+    width: 40%;
+    margin: 0 auto;
+    padding: 15px;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    &__header{
+      display: flex;
+      justify-content: space-between;
+      &__name{
+        font-weight: bold;
+      }
+    }
+    &__footer{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      &__delete{
+        color: red;
+      }
+    }
+  }
+}
